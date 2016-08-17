@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/russellhaering/gosaml2"
-	"github.com/russellhaering/goxmldsig"
+	"github.com/tracer0tong/gosaml2"
+	"github.com/tracer0tong/goxmldsig"
 )
 
 var rawIdpCertificate = `

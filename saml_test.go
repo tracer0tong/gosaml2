@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/beevik/etree"
-	"github.com/russellhaering/goxmldsig"
 	require "github.com/stretchr/testify/require"
+	"github.com/tracer0tong/goxmldsig"
 )
 
 func signResponse(t *testing.T, resp string, sp *SAMLServiceProvider) string {

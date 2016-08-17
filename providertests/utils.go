@@ -7,9 +7,9 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/russellhaering/gosaml2"
-	"github.com/russellhaering/goxmldsig"
 	"github.com/stretchr/testify/require"
+	"github.com/tracer0tong/gosaml2"
+	"github.com/tracer0tong/goxmldsig"
 )
 
 func LoadXMLResponse(path string) string {

@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/jonboulle/clockwork"
-	"github.com/russellhaering/gosaml2"
-	"github.com/russellhaering/goxmldsig"
+	"github.com/tracer0tong/gosaml2"
+	"github.com/tracer0tong/goxmldsig"
 )
 
 func TestValidateResponses(t *testing.T) {

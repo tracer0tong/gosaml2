@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/russellhaering/goxmldsig"
 	"github.com/stretchr/testify/require"
+	"github.com/tracer0tong/goxmldsig"
 )
 
 const idpCert = `
