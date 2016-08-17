@@ -28,17 +28,11 @@ func (sp *SAMLServiceProvider) BuildAuthRequest() (string, error) {
 	authnRequest.CreateAttr("IssueInstant", sp.Clock.Now().UTC().Format(issueInstantFormat))
 	authnRequest.CreateAttr("Destination", sp.IdentityProviderSSOURL)
 	authnRequest.CreateElement("saml:Issuer").SetText(sp.IdentityProviderIssuer)
-
 	nameIdPolicy := authnRequest.CreateElement("samlp:NameIDPolicy")
-	nameIdPolicy.CreateAttr("AllowCreate", "true")
 	nameIdPolicy.CreateAttr("Format", sp.NameIdFormat)
-
 	requestedAuthnContext := authnRequest.CreateElement("samlp:RequestedAuthnContext")
-	requestedAuthnContext.CreateAttr("Comparison", "exact")
-
 	authnContextClassRef := requestedAuthnContext.CreateElement("saml:AuthnContextClassRef")
-	authnContextClassRef.SetText("urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport")
-
+	authnContextClassRef.SetText("urn:federation:authentication:windows")
 	doc := etree.NewDocument()
 
 	if sp.SignAuthnRequests {
